@@ -42,6 +42,8 @@ public class PA_Application
 				JOptionPane.showMessageDialog(null, e.getMessage(), "Fatal Error - Error Reporting Module", JOptionPane.ERROR_MESSAGE);
 			else
 				this.errorreporter.error(e);
+			// Any error that reaches this catch {} statement is considered fatal and
+			// requires the program to exit
 			System.exit(-1);
 		}
 	}
