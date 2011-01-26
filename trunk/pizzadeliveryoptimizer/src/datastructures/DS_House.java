@@ -35,7 +35,8 @@ public class DS_House implements Serializable
 	/**
 	 * Vertex constructor
 	 * @param name of the house
-	 * @param id associated to this house
+	 * @param x position of the house
+	 * @param y position of the house
 	 */
     public DS_House(String name, int x, int y)
     {
@@ -62,7 +63,7 @@ public class DS_House implements Serializable
 
 	/**
 	 * Determine if the current house object has been cleared or not
-	 * @return true if it has, false otherwise
+	 * @return true if it is, false otherwise
 	 */
 	public boolean isClear()
 	{

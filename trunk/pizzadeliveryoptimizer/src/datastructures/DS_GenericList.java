@@ -32,7 +32,7 @@ public class DS_GenericList<K> implements Iterable<K>, Serializable
 		}
 
 		/**
-		 * Create an empty item but with a next item (used for the Iterator)
+		 * Create an empty item with a 'next' Item (used for the Iterator)
 		 * @param next item in the list
 		 */
 		public Item(Item next)
@@ -165,6 +165,7 @@ public class DS_GenericList<K> implements Iterable<K>, Serializable
 
 	/**
 	 * Remove an object from the list
+	 * @param obj to remove from the list
 	 * @return whether or not it was removed
 	 */
 	public boolean remove(K obj)
@@ -202,6 +203,7 @@ public class DS_GenericList<K> implements Iterable<K>, Serializable
 
 	/**
 	 * Create an array of objects based on this list
+	 * @param c / class type to return
 	 * @return array representation of this list
 	 */
 	public K[] toArray(Class<K> c)

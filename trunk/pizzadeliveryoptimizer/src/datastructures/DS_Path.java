@@ -122,7 +122,8 @@ public class DS_Path implements Serializable
     }
 
     /**
-     * Over ride the toString() method to return the weight
+     * Over-ride the toString() method to return the weight
+     * @return the string representation of the weight
      */
     public String toString()
     {
