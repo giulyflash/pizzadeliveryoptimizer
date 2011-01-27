@@ -78,9 +78,9 @@ public class FS_Path extends FS_File<DS_Path>
 	}
 
 	/**
-	 * Add a path record to the list and file (make the path there and back - memory only)
+	 * Add a path record to the list and file
 	 * @param object of type Path to add to the content list and file
-	 * @return true on success, false otherwise (false on duplicate)
+	 * @return false on duplicate, otherwise true
 	 */
 	public boolean add(DS_Path object) throws EX_Exception
 	{

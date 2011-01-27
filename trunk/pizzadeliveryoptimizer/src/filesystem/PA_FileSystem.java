@@ -22,8 +22,8 @@ public class PA_FileSystem
 	private FS_Path fspath;
 
 	/**
-	 * File system constructor (initialise the entire data structure initialisation and setup the file system link
-	 * @param create decides whether to load or create
+	 * File system constructor (initialise the entire data structure and setup the file system link
+	 * @param create decides whether to load or create a map
 	 * @throws PRP_Exception
 	 */
 	public PA_FileSystem(boolean create) throws EX_Exception

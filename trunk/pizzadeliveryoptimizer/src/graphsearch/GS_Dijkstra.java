@@ -19,6 +19,8 @@ public class GS_Dijkstra
 
 	/**
 	 * Dijkstra graph searching class constructor
+	 * @param fs to use with this object
+	 * @param progressbar object to report the progress of current operations
 	 */
     public GS_Dijkstra(PA_FileSystem fs, JProgressBar progressbar)
     {
