@@ -442,6 +442,12 @@ public class UI_MapEditor extends JFrame implements ActionListener
 		this.updateStats();
 	}
 
+	/**
+	 * Set the current progress level of the progress bar
+	 * @param min value
+	 * @param max value
+	 * @param val to set it to (must be between min and max)
+	 */
 	private void setProgress(int min, int max, int val)
 	{
 		this.searchProgress.setMinimum(min);

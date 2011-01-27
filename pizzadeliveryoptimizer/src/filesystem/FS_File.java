@@ -23,21 +23,21 @@ public abstract class FS_File<K>
 	/**
 	 * Add an object to the content list and the file
 	 * @param object to add
-	 * @return true on success, false otherwise (false on duplicate)
+	 * @return false on duplicate, otherwise true
 	 * @throws PRP_Exception
 	 */
 	public abstract boolean add(K object) throws EX_Exception;
 
 	/**
-	 * Remove and object from the file and the content list
+	 * Remove an object from the file and the content list
 	 * @param object to remove
-	 * @return true if it was successfully added, otherwise false
+	 * @return true if it was successfully removed, otherwise false
 	 * @throws PRP_Exception
 	 */
 	public abstract boolean remove(K object) throws EX_Exception;
 
 	/**
-	 * Get the next available ID (used in conjunction the add method)
+	 * Get the next available ID (used in conjunction with the add method)
 	 * @return the next available ID as an integer
 	 */
 	protected abstract int getAvailableID() throws EX_Exception;

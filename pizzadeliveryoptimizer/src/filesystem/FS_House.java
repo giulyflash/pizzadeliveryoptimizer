@@ -77,7 +77,7 @@ public class FS_House extends FS_File<DS_House>
 	/**
 	 * Add a House record to the list and file
 	 * @param object of type House to add to the content list and file
-	 * @return true on success, false otherwise (false on duplicate)
+	 * @return false on duplicate, true otherwise
 	 * @throws PRP_Exception
 	 */
 	public boolean add(DS_House object) throws EX_Exception
@@ -115,7 +115,7 @@ public class FS_House extends FS_File<DS_House>
 
 	/**
 	 * Set the path file system object associated with this house object
-	 * @param fspath
+	 * @param fspath to attach
 	 */
 	public void setFSPath(FS_Path fspath)
 	{
