@@ -360,6 +360,7 @@ public class UI_MapEditor extends JFrame implements ActionListener
 			this.setApplicationStatus("Now select the starting house...");
 			this.isPathCreating = true;
 			this.startHouse = null;
+			this.graph.setCellsMovable(false);
 		} else if(event.getSource() == this.editObject) {
 			if(this.graph.getSelectionCell() != null) {
 				Object selection = this.graph.getModel().getValue(this.graph.getSelectionCell());
@@ -477,6 +478,7 @@ public class UI_MapEditor extends JFrame implements ActionListener
 					} finally {
 						this.isPathCreating = false;
 						this.startHouse = null;
+						this.graph.setCellsMovable(true);
 						this.updateMap();
 					}
 				}
