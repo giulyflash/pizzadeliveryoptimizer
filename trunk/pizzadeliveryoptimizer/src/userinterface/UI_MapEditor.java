@@ -20,6 +20,7 @@ import com.mxgraph.swing.mxGraphComponent;
 import datastructures.DS_House;
 import datastructures.DS_Path;
 import errors.EX_Exception;
+import errors.EX_Exception.ErrorType;
 import errors.PA_ErrorReporter;
 import filesystem.PA_FileSystem;
 import graphsearch.GS_Dijkstra;
@@ -387,12 +388,16 @@ public class UI_MapEditor extends JFrame implements ActionListener
 					String pathWeight = pathEditor.getUserInput();
 					if(pathWeight != null) {
 						try {
-							path.setWeight(Integer.parseInt(pathWeight));
+							int weight = Integer.parseInt(pathWeight);
+							if(weight <= 0 || weight > 1000) throw new EX_Exception("Path length must be great than 0 and smaller than 1001", ErrorType.ERROR_GRAPHICALINTERFACE, this);
+							path.setWeight(weight);
 							this.filesystem.overwritePath(path.getID(), path);
 							this.setApplicationStatus("Path edited successfully...");
 							this.setProgress(0, 100, 100);
 						} catch(EX_Exception e) {
 							this.reporter.warning(e);
+						} catch(NumberFormatException e) {
+							this.reporter.warning(new EX_Exception("Expected integer greater than 0 and smaller than 1001", ErrorType.ERROR_GRAPHICALINTERFACE, this, e));
 						}
 					} else {
 						this.setApplicationStatus("Operation cancelled...");
