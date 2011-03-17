@@ -157,6 +157,8 @@ public class FS_Path extends FS_File<DS_Path>
 			throw new EX_Exception("Missing file: " + this.file.getAbsolutePath(), ErrorType.ERROR_FILESYSTEM, e);
 		} catch(IOException e) {
 			throw new EX_Exception("I/O exception whilst writing to " + this.file.getAbsolutePath(), ErrorType.ERROR_FILESYSTEM, e);
+		} catch(Exception e) {
+			throw new EX_Exception("Unknown error whilst reading " + this.file.getAbsolutePath(), ErrorType.ERROR_FILESYSTEM, e);
 		} finally {
 			try {
 				if(rafile != null) rafile.close();
@@ -187,6 +189,8 @@ public class FS_Path extends FS_File<DS_Path>
 			throw new EX_Exception("Missing file: " + this.file.getAbsolutePath(), ErrorType.ERROR_FILESYSTEM, e);
 		} catch(IOException e) {
 			throw new EX_Exception("I/O exception whilst writing to " + this.file.getAbsolutePath(), ErrorType.ERROR_FILESYSTEM, e);
+		} catch(Exception e) {
+			throw new EX_Exception("Unknown error whilst reading " + this.file.getAbsolutePath(), ErrorType.ERROR_FILESYSTEM, e);
 		} finally {
 			try {
 				if(rafile != null) rafile.close();
@@ -223,6 +227,8 @@ public class FS_Path extends FS_File<DS_Path>
 			throw new EX_Exception("Missing file: " + this.file.getAbsolutePath(), ErrorType.ERROR_FILESYSTEM, e);
 		} catch(IOException e) {
 			throw new EX_Exception("I/O exception whilst writing to " + this.file.getAbsolutePath(), ErrorType.ERROR_FILESYSTEM, e);
+		} catch(Exception e) {
+			throw new EX_Exception("Unknown error whilst reading " + this.file.getAbsolutePath(), ErrorType.ERROR_FILESYSTEM, e);
 		} finally {
 			try {
 				if(rafile != null) rafile.close();

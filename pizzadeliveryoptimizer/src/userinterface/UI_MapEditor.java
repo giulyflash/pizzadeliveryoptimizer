@@ -412,7 +412,7 @@ public class UI_MapEditor extends JFrame implements ActionListener
 				try {
 					if(selection instanceof DS_House) {
 						if(((DS_House)selection).getID() == 0) {
-							this.setApplicationStatus("Cannot remove 0rth element (pizzeria)...");
+							this.setApplicationStatus("Cannot remove pizzeria!");
 							removed = false;
 						} else {
 							this.filesystem.removeHouse(((DS_House)selection).getID());
