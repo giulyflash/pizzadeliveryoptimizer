@@ -31,7 +31,7 @@ public class FS_House extends FS_File<DS_House>
 		try {
 			this.content = new DS_GenericList<DS_House>();
 			this.file = file;
-			this.read();
+			if(create == false) this.read();
 		} catch(EX_Exception e) {
 			if(!(e.getExtendedException() instanceof FileNotFoundException) && create == false)
 				throw e;
@@ -140,6 +140,8 @@ public class FS_House extends FS_File<DS_House>
 			throw new EX_Exception("Missing file: " + this.file.getAbsolutePath(), ErrorType.ERROR_FILESYSTEM, e);
 		} catch(IOException e) {
 			throw new EX_Exception("I/O exception whilst writing to " + this.file.getAbsolutePath(), ErrorType.ERROR_FILESYSTEM, e);
+		} catch(Exception e) {
+			throw new EX_Exception("Unknown error whilst reading " + this.file.getAbsolutePath(), ErrorType.ERROR_FILESYSTEM, e);
 		} finally {
 			try {
 				if(rafile != null) rafile.close();
@@ -170,6 +172,8 @@ public class FS_House extends FS_File<DS_House>
 			throw new EX_Exception("Missing file: " + this.file.getAbsolutePath(), ErrorType.ERROR_FILESYSTEM, e);
 		} catch(IOException e) {
 			throw new EX_Exception("I/O exception whilst writing to " + this.file.getAbsolutePath(), ErrorType.ERROR_FILESYSTEM, e);
+		} catch(Exception e) {
+			throw new EX_Exception("Unknown error whilst reading " + this.file.getAbsolutePath(), ErrorType.ERROR_FILESYSTEM, e);
 		} finally {
 			try {
 				if(rafile != null) rafile.close();
@@ -208,6 +212,8 @@ public class FS_House extends FS_File<DS_House>
 			throw new EX_Exception("Missing file: " + this.file.getAbsolutePath(), ErrorType.ERROR_FILESYSTEM, e);
 		} catch(IOException e) {
 			throw new EX_Exception("I/O exception whilst writing to " + this.file.getAbsolutePath(), ErrorType.ERROR_FILESYSTEM, e);
+		} catch(Exception e) {
+			throw new EX_Exception("Unknown error whilst reading " + this.file.getAbsolutePath(), ErrorType.ERROR_FILESYSTEM, e);
 		} finally {
 			try {
 				if(rafile != null) rafile.close();
